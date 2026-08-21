@@ -46,13 +46,27 @@ export async function verifySessionToken(token: string): Promise<PortalClaims | 
 export async function setSessionCookie(token: string) {
   const ttl = Number(process.env.PORTAL_SESSION_TTL_HOURS ?? 24) * 3600;
   // Cookie domain rules:
-  //  - Must be a bare host (no scheme, no path, no port). e.g. ".namwel.com.na" or "info.namwel.com.na".
-  //  - If PORTAL_COOKIE_DOMAIN is missing OR malformed, leave the domain
-  //    undefined so the browser scopes the cookie to the current host
-  //    (works for both vercel.app previews and the eventual custom domain).
+  //  - For a single-host deployment, the browser scopes the cookie to the
+  //    current host automatically, which is what we want.
+  //  - We only set an explicit domain if the env var is set AND the current
+  //    request is on a host that matches it. This keeps the cookie working
+  //    on `*.vercel.app` previews AND on the eventual custom domain, without
+  //    having to flip env vars by hand.
+  //  - If PORTAL_COOKIE_DOMAIN looks like a URL (`https://...`) or has a
+  //    path or port, ignore it.
   const raw = (process.env.PORTAL_COOKIE_DOMAIN || '').trim();
-  const looksLikeDomain = /^\.?[a-z0-9]([a-z0-9-]*[a-z0-9])?(\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)+$/.test(raw);
-  const cookieDomain = looksLikeDomain ? raw : undefined;
+  const isValidDomain = /^\.?[a-z0-9]([a-z0-9-]*[a-z0-9])?(\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)+$/.test(raw);
+  const currentHost = (await import('next/headers')).headers().get('host') || '';
+  // Only use the env var if the current host actually matches it
+  // (e.g. PORTAL_COOKIE_DOMAIN=".namwel.com.na" + host="info.namwel.com.na").
+  // Otherwise leave undefined → browser scopes to current host (vercel.app etc.).
+  let cookieDomain: string | undefined = undefined;
+  if (isValidDomain && currentHost) {
+    const stripped = raw.startsWith('.') ? raw.slice(1) : raw;
+    if (currentHost === stripped || currentHost.endsWith('.' + stripped)) {
+      cookieDomain = raw;
+    }
+  }
   cookies().set(COOKIE_NAME, token, {
     httpOnly: true,
     sameSite: 'lax',

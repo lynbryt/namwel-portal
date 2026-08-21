@@ -1,0 +1,35 @@
+{
+  "framework": "nextjs",
+  "regions": ["fra1"],
+  "buildCommand": "next build",
+  "installCommand": "npm install",
+  "outputDirectory": ".next",
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" },
+        { "key": "Permissions-Policy", "value": "camera=(), microphone=(), geolocation=()" }
+      ]
+    },
+    {
+      "source": "/verify/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=300" }
+      ]
+    }
+  ],
+  "crons": [],
+  "functions": {
+    "app/api/render-pdf/route.ts": {
+      "maxDuration": 60,
+      "memory": 2048
+    },
+    "app/api/upload-document/route.ts": {
+      "maxDuration": 30,
+      "memory": 1024
+    }
+  }
+}

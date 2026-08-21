@@ -1,0 +1,284 @@
+{
+  "version": "v1.0",
+  "issued_at": "2026-08-19",
+  "title": "Essential Traveller Information",
+  "subtitle": "Your Pre-Departure Guide to Southern Africa",
+  "regions": ["Namibia", "Botswana", "Zimbabwe", "South Africa"],
+  "disclaimer": "Entry, visa, health and border requirements are set by government authorities and change without notice. This guide reflects requirements as generally applied at the date of issue and is provided in good faith as guidance only; it does not replace official confirmation from the relevant embassy, consulate or immigration authority, which remains each traveller's responsibility.",
+  "sections": [
+    {
+      "key": "sec_1_passports",
+      "title": "Passports & Visas",
+      "estimated_minutes": 2,
+      "intro": "Welcome, and thank you for choosing Namwel Tours & Car Rentals for your Southern African journey. This guide contains the essential information every traveller in your party must read and act on before leaving home. Border officials in this region enforce documentation rules strictly, distances are vast, and some requirements — particularly for children — take weeks to prepare. A few minutes with this guide now protect your entire holiday later.",
+      "paragraphs": [
+        "Your passport must be valid for at least six (6) months beyond your intended departure date from the region.",
+        "Carry at least two (2) blank visa pages per country you will enter — a multi-country self-drive can require six or more blank pages in total.",
+        "Every traveller, including infants and children, must have their own passport.",
+        "Carry certified paper copies of all passports separately from the originals, plus digital photos on your phone."
+      ],
+      "subheadings": [
+        {
+          "title": "Visa overview by country",
+          "table": {
+            "headers": ["Country", "Typical requirement for EU / UK / US / most Western passports"],
+            "rows": [
+              ["Namibia", "Since 1 April 2025, nationals of 33 previously visa-exempt countries (including France, Germany, the UK, the USA and Canada) require a visa: N$1,600 (≈ US$90) for non-African nationals, valid 30 days. Apply online (e-visa) before travel — strongly recommended — or on arrival at designated ports including Hosea Kutako Int. Airport, Walvis Bay and Trans-Kalahari. Children under 6 are exempt; reduced fee for ages 6–11."],
+              ["Botswana", "Visa-free for most Western nationalities for stays up to 90 days. Passport stamped on entry at no charge. Vehicle levies apply separately (see Section 4)."],
+              ["Zimbabwe", "Visa on arrival for most Western nationalities (fee varies by nationality, typically US$30–US$55, cash). If combining Zimbabwe and Zambia (e.g. Victoria Falls), ask about the KAZA UniVisa where available."],
+              ["South Africa", "Visa-free for most Western nationalities for stays up to 90 days. Two blank pages required per entry."]
+            ]
+          }
+        }
+      ],
+      "callout": "Important: Visa rules change frequently and depend on your nationality. Confirm your own requirements with the relevant embassy or official government portal no later than four (4) weeks before departure. Namwel will gladly assist with confirmation letters and itinerary documents needed for visa applications."
+    },
+    {
+      "key": "sec_2_arrival",
+      "title": "Arrival Day, Delays & Our No-Refund Reality",
+      "estimated_minutes": 1,
+      "paragraphs": [
+        "Your tour is built as a chain: each night's lodge, park permit, activity and vehicle is booked, confirmed and paid for in advance on your behalf. Southern African lodges and operators do not refund late arrivals or no-shows. This means:",
+        "If you arrive late — even by one day — the itinerary continues without pause. Missed nights, meals, park entries and activities cannot be refunded, exchanged or credited.",
+        "Catching up with a group already on the road is at your own cost, including any extra accommodation, fuel or transfers arranged by Namwel on your behalf.",
+        "Book flights that arrive at least one full day before the tour start date. This buffer absorbs airline delays, missed connections and lost luggage.",
+        "Take out comprehensive travel insurance with trip-delay and cancellation cover (Section 5) is the only way to recover costs from flight disruptions.",
+        "If you are delayed for any reason, contact Namwel immediately on our emergency number: +264 812127874 or +264 817627908. The earlier we know, the more we can rearrange."
+      ]
+    },
+    {
+      "key": "sec_3_children",
+      "title": "Travelling with Children (Under 18) — CRITICAL",
+      "estimated_minutes": 4,
+      "critical": true,
+      "warning": "NO DOCUMENTS = NO ENTRY. NO EXCEPTIONS. Namibia, Botswana, South Africa and Zimbabwe all enforce strict documentation for every traveller under 18 years of age. Border officials can and do refuse entry to families who cannot produce these documents — regardless of visas, bookings or tickets held. These rules apply at every border crossing, not only at airports.",
+      "paragraphs": [
+        "The one document every child needs: an unabridged (full / long-form) birth certificate — a birth certificate showing the particulars of the child AND both parents. An abridged/short certificate showing only the child's details will be rejected. Carry the original or a copy certified by a notary or commissioner of oaths. Documents not issued in English should be accompanied by a sworn English translation."
+      ],
+      "subheadings": [
+        {
+          "title": "Additional documents by travel situation",
+          "table": {
+            "headers": ["Who is the child travelling with?", "Documents required in addition to passport + unabridged birth certificate"],
+            "rows": [
+              ["Both parents", "No additional documents (names on the birth certificate must match the parents' passports)."],
+              ["One parent only", "Parental consent affidavit from the non-travelling parent (signed before a notary/commissioner of oaths, generally no older than 3–4 months at date of travel) + certified copy of that parent's passport or ID. If the other parent is deceased: certified death certificate. If sole custody: court order."],
+              ["Grandparents, relatives, friends or a guardian", "Consent affidavits from BOTH parents + certified copies of both parents' passports/IDs + parents' full contact details. Legal guardians: certified guardianship or court order."],
+              ["Unaccompanied minor", "Consent affidavit from both parents/guardians + letter from the person receiving the child (with full contact details and address) + certified copy of that person's ID/passport."]
+            ]
+          }
+        }
+      ],
+      "reminders": [
+        "Prepare these documents 6–8 weeks before travel — obtaining certified certificates and notarised affidavits takes time in most home countries.",
+        "Carry all children's documents in hand luggage, never in checked bags.",
+        "These documents will be checked at every border on a multi-country itinerary — keep them accessible throughout the trip.",
+        "Send copies to Namwel with your booking so we can pre-check them. We will not commence a cross-border itinerary for a party whose minors' documents we have not verified."
+      ]
+    },
+    {
+      "key": "sec_4_borders",
+      "title": "Border Crossings With Your Rental Vehicle",
+      "estimated_minutes": 3,
+      "paragraphs": [
+        "Cross-border authorisation: the vehicle may only leave Namibia with Namwel's written cross-border letter, and the certified vehicle documents we issue. Request this at booking — it cannot be arranged at the border.",
+        "Carry: passports (and children's documents), driving licences / International Driving Permit, the rental agreement, the cross-border letter and vehicle registration papers.",
+        "Third-party insurance, road permits and levies for foreign-registered vehicles are payable at the border in local currency or card (availability varies) — budget a cash reserve for each crossing.",
+        "Declare fresh meat, dairy, fruit and plant products — many are prohibited across these borders, and veterinary control points inside Namibia and Botswana also inspect vehicles. Botswana additionally bans plastic carrier bags."
+      ],
+      "subheadings": [
+        {
+          "title": "Main border posts used on our routes",
+          "table": {
+            "headers": ["Border post", "Connects", "Typical hours*"],
+            "rows": [
+              ["Trans-Kalahari / Mamuno", "Namibia ↔ Botswana (Gobabis–Ghanzi)", "07:00 – 24:00"],
+              ["Ngoma Bridge", "Namibia ↔ Botswana (Zambezi–Chobe)", "07:00 – 18:00"],
+              ["Mohembo", "Namibia ↔ Botswana (Okavango Panhandle)", "06:00 – 18:00"],
+              ["Kazungula Bridge", "Botswana ↔ Zambia/Zimbabwe corridor", "06:00 – 20:00"],
+              ["Ariamsvlei / Nakop", "Namibia ↔ South Africa (south-east)", "24 hours"],
+              ["Noordoewer / Vioolsdrif", "Namibia ↔ South Africa (Orange River)", "24 hours"],
+              ["Beitbridge", "South Africa ↔ Zimbabwe", "24 hours"],
+              ["Plumtree / Ramokgwebana", "Botswana ↔ Zimbabwe", "06:00 – 22:00"]
+            ]
+          },
+          "footnote": "*Hours change and queues at month-end and holidays can be long. Plan to arrive at any border at least two hours before closing, never at closing time."
+        }
+      ]
+    },
+    {
+      "key": "sec_5_health",
+      "title": "Health, Vaccinations & Travel Insurance",
+      "estimated_minutes": 2,
+      "paragraphs": [
+        "Travel insurance is compulsory for all Namwel tours and must include medical treatment, emergency evacuation, trip cancellation/delay and personal liability. Medical evacuation from remote areas is by air and extremely costly without cover.",
+        "Malaria: risk areas include northern Namibia (Etosha northwards, Kavango & Zambezi regions, roughly November–June), northern Botswana (Okavango, Chobe), Zimbabwe (including Victoria Falls) and the Kruger lowveld. Consult a travel clinic about prophylaxis 4–6 weeks before departure; use repellent and cover up at dusk.",
+        "Yellow fever: a vaccination certificate is required only if you arrive from, or transit through, a yellow-fever-endemic country. Not required when travelling directly from Europe.",
+        "Routine vaccinations (tetanus, hepatitis A, typhoid) should be up to date — confirm with your travel clinic.",
+        "Bring sufficient personal prescription medication for the whole trip in original packaging, with a doctor's letter; pharmacies are good in cities but sparse in remote areas.",
+        "Tap water is generally safe in Namibian and South African towns; drink bottled or filtered water in rural areas and always carry at least 5 litres per person in the vehicle.",
+        "The sun is severe: high-SPF sunscreen, hats and sunglasses are essential year-round."
+      ]
+    },
+    {
+      "key": "sec_6_money",
+      "title": "Money, Currency & Payments",
+      "estimated_minutes": 1,
+      "subheadings": [
+        {
+          "table": {
+            "headers": ["Country", "Currency", "Practical notes"],
+            "rows": [
+              ["Namibia", "Namibia Dollar (N$)", "Pegged 1:1 to the South African Rand; ZAR is accepted everywhere in Namibia (N$ is NOT accepted in South Africa). Cards widely accepted; carry cash for rural fuel stops, craft markets and tips."],
+              ["Botswana", "Pula (BWP)", "Obtain Pula at the border or ATMs; cards accepted in towns and lodges. Cash needed for border levies, small shops and fuel in remote areas."],
+              ["Zimbabwe", "US Dollar widely used", "Carry small-denomination US$ notes in good condition (post-2013 print); change is scarce. Cards are unreliable outside major hotels."],
+              ["South Africa", "Rand (ZAR)", "Cards are accepted almost everywhere including fuel stations; ATMs plentiful in towns."]
+            ]
+          }
+        }
+      ],
+      "paragraphs": [
+        "Notify your bank of your travel to all four countries to avoid card blocks; carry two different cards stored separately.",
+        "Tipping guide: 5 to 10% in restaurants; N$5–10 for fuel attendants and car guards; US$ or € 5–10 per day for safari guides (at your discretion)."
+      ]
+    },
+    {
+      "key": "sec_7_driving",
+      "title": "Driving in Southern Africa — Self-Drive Essentials",
+      "estimated_minutes": 3,
+      "paragraphs": [
+        "We drive on the LEFT throughout the region. Take extra care at intersections and when pulling off after rest stops.",
+        "Licences: carry your original national driving licence; if it is not printed in English, an International Driving Permit is required alongside it.",
+        "Couples and friends sharing the driving: every person who will drive must be named on the Rental Agreement before departure. An unnamed driver — even a spouse or friend taking a short turn at the wheel — voids the insurance cover, leaving the party liable for the full cost of any damage. Adding a driver takes minutes at pick-up; ask us.",
+        "Speed limits: 120 km/h on tar highways, 60 km/h in towns and per your Rental Agreement, a maximum of 80 km/h on gravel. Gravel surfaces are deceptive: braking distances double and corners drift.",
+        "No driving at night outside towns. Kudu, warthog, cattle, donkeys and elephants on unfenced roads cause most serious accidents in the region. Plan every day's leg to end before sunset.",
+        "Distances are vast and services sparse: refuel at every opportunity once below three-quarters of a tank and carry water and snacks. Some stretches exceed 300 km without fuel.",
+        "Check tyre pressure, oil and coolant every morning; your vehicle carries a full-size spare, jack and triangle (see the equipment checklist in your Rental Agreement).",
+        "Police and veterinary checkpoints are routine: slow down, stop when signalled, and have licences and vehicle papers at hand. Wearing seatbelts (all occupants) is law; using a hand-held phone while driving is prohibited.",
+        "In national parks: remain in the vehicle except at designated points, keep to speed limits (usually 40–60 km/h), never feed or approach wildlife, and give elephants right of way at a generous distance.",
+        "Accidents and breakdowns: follow the procedure in clause 9 of your Rental Agreement — call Namwel first, and never sign or admit anything at the scene."
+      ]
+    },
+    {
+      "key": "sec_8_climate",
+      "title": "Climate & What to Pack",
+      "estimated_minutes": 1,
+      "paragraphs": [
+        "Seasons are opposite to Europe. Summer (Nov–Apr) is hot with afternoon thunderstorms in the north; winter (May–Oct) is dry and sunny with warm days but cold nights — desert nights can approach freezing in June–August.",
+        "Pack layers: light breathable clothing for the day, a warm fleece and jacket for early game drives and evenings, comfortable closed walking shoes, a sun hat and swimwear.",
+        "Neutral colours (khaki, olive, beige) are best on safari; avoid bright white and dark blue/black (which attract tsetse flies in some areas).",
+        "Essential kit: binoculars, headlamp/torch, power bank, universal plug adapter (Type D & M, 220–240 V), camera with spare batteries, soft duffel bags rather than hard suitcases for light-aircraft transfers.",
+        "If flying between camps, checked luggage on light aircraft is typically limited to 15–20 kg in soft bags — confirm with us for your itinerary."
+      ]
+    },
+    {
+      "key": "sec_9_connectivity",
+      "title": "Staying Connected & Personal Safety",
+      "estimated_minutes": 2,
+      "paragraphs": [
+        "Mobile coverage is good in towns and along main routes but absent across large wilderness areas — do not rely on a phone for navigation or emergencies in remote regions. Download offline maps before departure.",
+        "Local SIM cards / eSIMs (e.g. MTC in Namibia) are inexpensive and available at the airport — bring your passport for registration. Wi-Fi at lodges is common but often slow.",
+        "Namwel provides a 24-hour emergency contact for the duration of your tour; save it in your phone AND keep a written copy in the vehicle.",
+        "Solo travelers: leave your daily route plan with Namwel each morning, a quick message with your day's route and destination. With no travel companion to raise an alarm, this simple habit means that if you fail to arrive, we know where to start looking. Tell lodge staff your next destination when checking out, too.",
+        "Usual common-sense precautions apply in cities: keep valuables out of sight, use hotel safes, avoid walking alone after dark, and keep vehicle doors locked in towns.",
+        "Never leave luggage, cameras or documents visible in a parked vehicle.",
+        "Photography: ask permission before photographing people; photographing military installations, some government buildings and border posts is prohibited. Drones require permits in all four countries and are banned in national parks without prior authorisation — ask us well in advance."
+      ]
+    },
+    {
+      "key": "sec_10_emergency",
+      "title": "Key Emergency Numbers",
+      "estimated_minutes": 1,
+      "subheadings": [
+        {
+          "table": {
+            "headers": ["Service", "Namibia", "Botswana", "Zimbabwe", "South Africa"],
+            "rows": [
+              ["Police", "10111", "999", "995", "10111"],
+              ["Ambulance", "211111 (Windhoek)", "997", "994", "10177"],
+              ["General emergency (mobile)", "112", "112", "112", "112"]
+            ]
+          }
+        }
+      ],
+      "callout": "Namwel 24-hour emergency line – French - English: +264 812127874 / +264 817627908\nNamwel office (business hours) – French - English: +264 61 244697"
+    },
+    {
+      "key": "sec_11_checklist",
+      "title": "Pre-Departure Checklist",
+      "estimated_minutes": 2,
+      "paragraphs": ["Complete each item at the appropriate time before departure. The portal tracks your progress automatically."],
+      "checklist_grouped": [
+        {
+          "group": "8 weeks before",
+          "items": [
+            "Check every passport: valid 6+ months beyond return, 2+ blank pages per country",
+            "Children under 18: order unabridged birth certificates and arrange notarised consent affidavits (Section 3)",
+            "Confirm visa requirements for your nationality; apply for the Namibian e-visa online",
+            "Visit a travel clinic: malaria advice and routine vaccinations",
+            "Take out comprehensive travel insurance (medical, evacuation, cancellation, delay)"
+          ]
+        },
+        {
+          "group": "2–4 weeks before",
+          "items": [
+            "Send copies of passports, children's documents and insurance to Namwel for pre-checking",
+            "Confirm International Driving Permit if your licence is not in English",
+            "Sharing the driving? Confirm every driver is named on the Rental Agreement",
+            "Notify your bank of travel; arrange cash (small US$ notes if visiting Zimbabwe)",
+            "Book flights arriving at least one day before the tour start date",
+            "Download offline maps; save Namwel's emergency number"
+          ]
+        },
+        {
+          "group": "Packing day",
+          "items": [
+            "All original documents + certified copies in hand luggage (never checked bags)",
+            "Prescription medication in original packaging with doctor's letter",
+            "Layers, sun protection, binoculars, adapters (Type D & M), soft bags if flying between camps"
+          ]
+        }
+      ]
+    }
+  ],
+  "checklist": [
+    { "key": "ck_passport_validity", "group": "8_weeks", "label": "Check every passport: valid 6+ months beyond return, 2+ blank pages per country" },
+    { "key": "ck_children_docs", "group": "8_weeks", "label": "Children under 18: order unabridged birth certificates and arrange notarised consent affidavits" },
+    { "key": "ck_visa_eVisa", "group": "8_weeks", "label": "Confirm visa requirements for your nationality; apply for the Namibian e-visa online" },
+    { "key": "ck_travel_clinic", "group": "8_weeks", "label": "Visit a travel clinic: malaria advice and routine vaccinations" },
+    { "key": "ck_insurance", "group": "8_weeks", "label": "Take out comprehensive travel insurance" },
+    { "key": "ck_send_copies", "group": "2_4_weeks", "label": "Send copies of passports, children's documents and insurance to Namwel for pre-checking" },
+    { "key": "ck_idp", "group": "2_4_weeks", "label": "Confirm International Driving Permit if your licence is not in English" },
+    { "key": "ck_named_drivers", "group": "2_4_weeks", "label": "Sharing the driving? Confirm every driver is named on the Rental Agreement" },
+    { "key": "ck_bank_notify", "group": "2_4_weeks", "label": "Notify your bank of travel; arrange cash (small US$ notes if visiting Zimbabwe)" },
+    { "key": "ck_flights", "group": "2_4_weeks", "label": "Book flights arriving at least one day before the tour start date" },
+    { "key": "ck_offline_maps", "group": "2_4_weeks", "label": "Download offline maps; save Namwel's emergency number" },
+    { "key": "ck_originals_hand", "group": "packing_day", "label": "All original documents + certified copies in hand luggage (never checked bags)" },
+    { "key": "ck_medication", "group": "packing_day", "label": "Prescription medication in original packaging with doctor's letter" },
+    { "key": "ck_layers", "group": "packing_day", "label": "Layers, sun protection, binoculars, adapters (Type D & M), soft bags if flying between camps" }
+  ],
+  "declarations": [
+    { "key": "decl_read_all", "label": "I have read all 11 sections of this guide and understood them." },
+    { "key": "decl_accurate", "label": "I confirm the information I have provided is true and complete, and I will notify Namwel of any change before departure." },
+    { "key": "decl_originals", "label": "I will carry the originals of all uploaded documents during travel. The copies uploaded here are for Namwel's pre-trip check only." },
+    { "key": "decl_share_party", "label": "I will share the relevant sections of this guide with every member of my party (including any children old enough to read them)." },
+    { "key": "decl_authority", "label": "I understand that entry, visa, health and border requirements are set by government authorities, may change without notice, and are ultimately my responsibility to confirm with the relevant embassy or consulate." }
+  ],
+  "doc_type_labels": {
+    "passport": "Passport (scan of photo page)",
+    "eVisa": "eVisa or visa confirmation",
+    "unabridged_birth_cert": "Unabridged birth certificate",
+    "parental_consent_affidavit": "Parental consent affidavit",
+    "non_travelling_parent_id": "Non-travelling parent ID/passport copy",
+    "death_certificate": "Death certificate",
+    "court_order": "Court order (sole custody)",
+    "guardianship_order": "Guardianship order",
+    "receiving_person_letter": "Letter from receiving person",
+    "receiving_person_id": "Receiving person ID/passport copy",
+    "insurance_certificate": "Travel insurance certificate",
+    "driving_licence": "Driving licence",
+    "idp": "International Driving Permit",
+    "prescription_letter": "Doctor's letter for medication",
+    "other": "Other supporting document"
+  }
+}

@@ -45,13 +45,21 @@ export async function verifySessionToken(token: string): Promise<PortalClaims | 
 
 export async function setSessionCookie(token: string) {
   const ttl = Number(process.env.PORTAL_SESSION_TTL_HOURS ?? 24) * 3600;
+  // Cookie domain rules:
+  //  - Must be a bare host (no scheme, no path, no port). e.g. ".namwel.com.na" or "info.namwel.com.na".
+  //  - If PORTAL_COOKIE_DOMAIN is missing OR malformed, leave the domain
+  //    undefined so the browser scopes the cookie to the current host
+  //    (works for both vercel.app previews and the eventual custom domain).
+  const raw = (process.env.PORTAL_COOKIE_DOMAIN || '').trim();
+  const looksLikeDomain = /^\.?[a-z0-9]([a-z0-9-]*[a-z0-9])?(\.[a-z0-9]([a-z0-9-]*[a-z0-9])?)+$/.test(raw);
+  const cookieDomain = looksLikeDomain ? raw : undefined;
   cookies().set(COOKIE_NAME, token, {
     httpOnly: true,
     sameSite: 'lax',
     secure: process.env.NODE_ENV === 'production',
     path: '/',
     maxAge: ttl,
-    domain: process.env.PORTAL_COOKIE_DOMAIN || undefined,
+    domain: cookieDomain,
   });
 }
 

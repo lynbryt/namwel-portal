@@ -1,10 +1,16 @@
 // Password hashing using argon2id.
-// `argon2` is a native node addon; for edge runtimes use `@node-rs/argon2`.
-// We deliberately use argon2id (memory-hard) per the spec.
-import argon2 from 'argon2';
+// `@node-rs/argon2` is a pure-Rust, statically-linked implementation that
+// works on Vercel's serverless runtime (the older `argon2` package is a
+// native node-gyp addon that fails to load on Lambda/Vercel).
+import { hash, verify, Options } from '@node-rs/argon2';
 
-const OPTS: argon2.Options = {
-  type: argon2.argon2id,
+// `Algorithm` is a const enum in @node-rs/argon2, which can't be used with
+// TypeScript's isolatedModules. Use the numeric value directly:
+//   Argon2d = 0, Argon2i = 1, Argon2id = 2
+const ARGON2ID = 2 as const;
+
+const OPTS: Options = {
+  algorithm: ARGON2ID,
   memoryCost: 19456,  // 19 MiB
   timeCost: 2,
   parallelism: 1,
@@ -14,12 +20,12 @@ export async function hashPassword(plain: string): Promise<string> {
   if (plain.length < 8) {
     throw new Error('password must be at least 8 characters');
   }
-  return argon2.hash(plain, OPTS);
+  return hash(plain, OPTS);
 }
 
-export async function verifyPassword(hash: string, plain: string): Promise<boolean> {
+export async function verifyPassword(hashStr: string, plain: string): Promise<boolean> {
   try {
-    return await argon2.verify(hash, plain);
+    return await verify(hashStr, plain);
   } catch {
     return false;
   }

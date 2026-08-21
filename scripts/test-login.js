@@ -5,7 +5,7 @@
 
 const fs = require('fs');
 const path = require('path');
-const argon2 = require('argon2');
+const { verify } = require('@node-rs/argon2');
 const { createClient } = require('@supabase/supabase-js');
 
 function loadEnvLocal() {
@@ -38,8 +38,8 @@ function loadEnvLocal() {
     process.exit(1);
   }
 
-  const hash = sessions.password_hash;
-  console.log('Hash prefix:', hash.slice(0, 40), '...');
+  const hashStr = sessions.password_hash;
+  console.log('Hash prefix:', hashStr.slice(0, 40), '...');
   console.log('');
 
   const candidates = [
@@ -56,7 +56,7 @@ function loadEnvLocal() {
   console.log('Testing candidate passwords:');
   for (const p of candidates) {
     try {
-      const ok = await argon2.verify(hash, p);
+      const ok = await verify(hashStr, p);
       console.log(`  ${ok ? '✓ MATCH' : '✗ no   '}  "${p}"`);
       if (ok) {
         console.log('');

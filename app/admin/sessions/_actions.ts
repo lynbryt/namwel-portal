@@ -3,8 +3,12 @@
 import { z } from 'zod';
 import { revalidatePath } from 'next/cache';
 import { headers } from 'next/headers';
-import argon2 from 'argon2';
+import { hash } from '@node-rs/argon2';
 import { getAdmin } from '@/lib/supabase/admin';
+
+// `Algorithm` is a const enum in @node-rs/argon2 — use numeric value directly.
+//   Argon2d = 0, Argon2i = 1, Argon2id = 2
+const ARGON2ID = 2 as const;
 import { logAudit, getClientIp, getUserAgent } from '@/lib/audit/log';
 import { generateUniqueReference, generatePassword } from '@/lib/admin/generate';
 import { createClient as createServerSupabase } from '@/lib/supabase/server';
@@ -116,8 +120,8 @@ export async function createSigningSession(rawInput: unknown): Promise<CreateSes
 
   // 4. Generate a password and hash it.
   const password = generatePassword();
-  const passwordHash = await argon2.hash(password, {
-    type: argon2.argon2id,
+  const passwordHash = await hash(password, {
+    algorithm: ARGON2ID,
     memoryCost: 19456,
     timeCost: 2,
     parallelism: 1,

@@ -11,8 +11,12 @@
 
 const fs = require('fs');
 const path = require('path');
-const argon2 = require('argon2');
 const { createClient } = require('@supabase/supabase-js');
+const { hash } = require('@node-rs/argon2');
+
+// `Algorithm` is a const enum — use the numeric value directly.
+//   Argon2d = 0, Argon2i = 1, Argon2id = 2
+const ARGON2ID = 2;
 
 function loadEnvLocal() {
   const p = path.join(process.cwd(), '.env.local');
@@ -60,8 +64,8 @@ function assertValidRef(ref) {
   const bookingId    = arg('booking', 'BOOKING-DEMO');
 
   // Hash the password with argon2id (same params as lib/auth/password.ts).
-  const passwordHash = await argon2.hash(password, {
-    type: argon2.argon2id,
+  const passwordHash = await hash(password, {
+    algorithm: ARGON2ID,
     memoryCost: 19456,
     timeCost: 2,
     parallelism: 1,

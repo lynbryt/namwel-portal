@@ -12,5 +12,3 @@ next-env.d.ts
 .vercel
 .playwright
 coverage
-
-.vercel

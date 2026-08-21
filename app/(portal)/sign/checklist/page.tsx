@@ -18,6 +18,14 @@ export default async function ChecklistScreen() {
 
   const stateMap = Object.fromEntries((state ?? []).map((s) => [s.item_key, s.checked]));
 
+  // Hide the children-docs checklist item when there are no minors in
+  // the party — it doesn't apply, and forcing the lead to tick "N/A"
+  // is confusing UX.
+  const items = (session.has_minor
+    ? guide.checklist
+    : guide.checklist.filter((i) => i.key !== 'ck_children_docs')
+  );
+
   return (
     <WizardShell current="checklist" hasMinor={!!session.has_minor}>
       <div className="mb-6">
@@ -26,7 +34,7 @@ export default async function ChecklistScreen() {
       </div>
 
       <ChecklistView
-        items={guide.checklist}
+        items={items}
         groupLabels={i18n.checklist.groups}
         initialState={stateMap}
         nextHref="/sign/documents"

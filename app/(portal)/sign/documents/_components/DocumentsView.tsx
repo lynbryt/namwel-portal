@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useTransition } from 'react';
+import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { t } from '@/lib/i18n';
 
@@ -75,13 +76,22 @@ export function DocumentsView({ required, uploads }: { required: Required[]; upl
       </div>
 
       <div className="sticky bottom-0 -mx-6 px-6 py-4 bg-gradient-to-t from-sand via-sand to-transparent">
-        <button
-          onClick={() => router.push('/sign/sign')}
-          disabled={!allUploaded}
-          className="w-full bg-terracotta text-white font-medium py-3 rounded hover:bg-terracotta-dark disabled:opacity-40 disabled:cursor-not-allowed"
-        >
-          {allUploaded ? i18n.common.continue : `Upload all required documents to continue`}
-        </button>
+        {allUploaded ? (
+          <Link
+            href="/sign/sign"
+            className="block w-full text-center bg-terracotta text-white font-medium py-3 rounded hover:bg-terracotta-dark"
+          >
+            {i18n.common.continue}
+          </Link>
+        ) : (
+          <button
+            type="button"
+            disabled
+            className="w-full bg-terracotta text-white font-medium py-3 rounded opacity-40 cursor-not-allowed"
+          >
+            Upload all required documents to continue
+          </button>
+        )}
       </div>
     </div>
   );

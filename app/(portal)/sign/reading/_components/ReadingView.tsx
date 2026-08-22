@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useTransition } from 'react';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { acknowledgeSection } from '@/app/(portal)/sign/_actions/checklist';
 import { t } from '@/lib/i18n';
@@ -20,7 +20,6 @@ type Props = {
 };
 
 export function ReadingView({ groups, ackMap: initialAckMap, nextHref }: Props) {
-  const router = useRouter();
   const [ackMap, setAckMap] = useState<Record<string, boolean>>(initialAckMap);
   const [pending, startTransition] = useTransition();
   const i18n = t('en');
@@ -80,14 +79,22 @@ export function ReadingView({ groups, ackMap: initialAckMap, nextHref }: Props) 
       ))}
 
       <div className="sticky bottom-0 -mx-6 px-6 py-4 bg-gradient-to-t from-sand via-sand to-transparent">
-        <button
-          type="button"
-          onClick={() => router.push(nextHref)}
-          disabled={!allAcked || pending}
-          className="w-full bg-terracotta text-white font-medium py-3 rounded hover:bg-terracotta-dark disabled:opacity-40 disabled:cursor-not-allowed"
-        >
-          {allAcked ? i18n.common.continue : `Continue (${ackedCount}/${totalSections} read)`}
-        </button>
+        {allAcked ? (
+          <Link
+            href={nextHref}
+            className="block w-full text-center bg-terracotta text-white font-medium py-3 rounded hover:bg-terracotta-dark"
+          >
+            {i18n.common.continue}
+          </Link>
+        ) : (
+          <button
+            type="button"
+            disabled
+            className="w-full bg-terracotta text-white font-medium py-3 rounded opacity-40 cursor-not-allowed"
+          >
+            Continue ({ackedCount}/{totalSections} read)
+          </button>
+        )}
       </div>
     </div>
   );

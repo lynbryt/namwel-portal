@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useTransition } from 'react';
-import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { toggleChecklistItem } from '@/app/(portal)/sign/_actions/checklist';
 import { t } from '@/lib/i18n';
 
@@ -14,7 +14,6 @@ type Props = {
 };
 
 export function ChecklistView({ items, groupLabels, initialState, nextHref }: Props) {
-  const router = useRouter();
   const [state, setState] = useState(initialState);
   const [, startTransition] = useTransition();
   const i18n = t('en');
@@ -73,12 +72,12 @@ export function ChecklistView({ items, groupLabels, initialState, nextHref }: Pr
         </div>
       ))}
 
-      <button
-        onClick={() => router.push(nextHref)}
-        className="w-full bg-terracotta text-white font-medium py-3 rounded hover:bg-terracotta-dark"
+      <Link
+        href={nextHref}
+        className="block w-full text-center bg-terracotta text-white font-medium py-3 rounded hover:bg-terracotta-dark"
       >
         {i18n.common.continue}
-      </button>
+      </Link>
     </div>
   );
 }

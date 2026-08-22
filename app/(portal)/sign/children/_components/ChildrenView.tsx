@@ -2,6 +2,7 @@
 
 import { useState, useTransition } from 'react';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 import { saveChildScenario } from '@/app/(portal)/sign/_actions/children';
 import { requiredDocsForScenario } from '@/lib/uploads/doc-types';
 import { t } from '@/lib/i18n';
@@ -54,12 +55,12 @@ export function ChildrenView({ minors, scenarios, uploads }: { minors: Minor[]; 
     return (
       <div className="bg-white border border-ink/10 rounded-lg p-8 text-center">
         <p className="text-ink-soft">No children in this party. You can continue to the checklist.</p>
-        <button
-          onClick={() => router.push('/sign/checklist')}
-          className="mt-4 bg-terracotta text-white font-medium px-6 py-2 rounded"
+        <Link
+          href="/sign/checklist"
+          className="mt-4 inline-block bg-terracotta text-white font-medium px-6 py-2 rounded hover:bg-terracotta-dark"
         >
           {i18n.common.continue}
-        </button>
+        </Link>
       </div>
     );
   }
@@ -124,13 +125,22 @@ export function ChildrenView({ minors, scenarios, uploads }: { minors: Minor[]; 
       )}
 
       <div className="sticky bottom-0 -mx-6 px-6 py-4 bg-gradient-to-t from-sand via-sand to-transparent">
-        <button
-          onClick={() => router.push('/sign/checklist')}
-          disabled={!allRequiredUploaded || pending}
-          className="w-full bg-terracotta text-white font-medium py-3 rounded hover:bg-terracotta-dark disabled:opacity-40 disabled:cursor-not-allowed"
-        >
-          {allRequiredUploaded ? i18n.common.continue : `Complete all child docs to continue`}
-        </button>
+        {allRequiredUploaded ? (
+          <Link
+            href="/sign/checklist"
+            className="block w-full text-center bg-terracotta text-white font-medium py-3 rounded hover:bg-terracotta-dark"
+          >
+            {i18n.common.continue}
+          </Link>
+        ) : (
+          <button
+            type="button"
+            disabled
+            className="w-full bg-terracotta text-white font-medium py-3 rounded opacity-40 cursor-not-allowed"
+          >
+            Complete all child docs to continue
+          </button>
+        )}
       </div>
     </div>
   );

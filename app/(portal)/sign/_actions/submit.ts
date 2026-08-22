@@ -216,10 +216,12 @@ export async function submitSignature(input: SubmitInput) {
     ip, user_agent: ua,
   });
 
-  // Trigger PDF render — fire-and-forget. The done page will poll for
-  // readiness (or we redirect to a "rendering" page if not ready).
-  // For now, just kick it off.
-  await triggerPdfRender(session.id).catch((err) => {
+  // Trigger PDF render — fire-and-forget. The user is redirected to the
+  // done page immediately, which polls for pdf_path readiness.
+  // We deliberately do NOT await the fetch here: Puppeteer can take 10-30s,
+  // which exceeds Vercel Hobby's 10s function timeout. The done page will
+  // call /api/render-pdf itself if pdf_path is still null.
+  triggerPdfRender(session.id).catch((err) => {
     console.error('[submit] pdf render trigger failed', err);
   });
 

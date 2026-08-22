@@ -114,6 +114,8 @@ export const en = {
     download: 'Download signed PDF',
     resend: 'Resend email',
     contact: 'If you need to update any information before departure, contact Namwel — a new signing session will be issued.',
+    generating: 'Preparing your signed PDF…',
+    stillGenerating: 'Still preparing… (first render can take up to a minute)',
   },
   errors: {
     networkError: 'A network error occurred. Please try again.',

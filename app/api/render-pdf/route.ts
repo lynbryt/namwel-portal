@@ -31,9 +31,6 @@ export async function POST(req: NextRequest) {
   }
 
   // Render the PDF.
-  // The full Puppeteer integration is in /lib/pdf/render.ts. For this
-  // buildable scaffold we generate a minimal placeholder PDF; the real
-  // render will replace this in production.
   const { renderPdfForSession } = await import('@/lib/pdf/render');
   const pdfBuffer = await renderPdfForSession(sessionId);
 
@@ -59,4 +56,31 @@ export async function POST(req: NextRequest) {
   });
 
   return NextResponse.json({ ok: true, path: pdfPath, bytes: pdfBuffer.length });
+}
+
+export async function GET(req: NextRequest) {
+  // Lightweight status check used by the done page to poll for readiness.
+  const url = new URL(req.url);
+  const sessionId = url.searchParams.get('session_id');
+  if (!sessionId) {
+    return NextResponse.json({ error: 'missing session_id' }, { status: 400 });
+  }
+
+  const admin = getAdmin();
+  const { data: session } = await admin
+    .from('signature_sessions')
+    .select('id, status, pdf_path')
+    .eq('id', sessionId)
+    .single();
+
+  if (!session) return NextResponse.json({ error: 'not found' }, { status: 404 });
+  if (session.status !== 'signed') {
+    return NextResponse.json({ error: 'not signed yet' }, { status: 409 });
+  }
+
+  return NextResponse.json({
+    ok: true,
+    path: session.pdf_path ?? null,
+    ready: !!session.pdf_path,
+  });
 }

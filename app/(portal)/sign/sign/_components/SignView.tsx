@@ -123,7 +123,7 @@ export function SignView({ leadName, declarations }: Props) {
         </div>
         <div className="mt-2 flex items-center justify-between text-xs text-ink-soft">
           <span>{hasSignature ? `${strokes} strokes` : 'Sign with your finger or mouse'}</span>
-          <button onClick={clearCanvas} className="underline hover:text-terracotta">{i18n.sign_.clear}</button>
+          <button type="button" onClick={clearCanvas} className="underline hover:text-terracotta">{i18n.sign_.clear}</button>
         </div>
       </div>
 
@@ -150,6 +150,7 @@ export function SignView({ leadName, declarations }: Props) {
       )}
 
       <button
+        type="button"
         onClick={submit}
         disabled={!canSubmit}
         className="w-full bg-terracotta text-white font-medium py-4 rounded hover:bg-terracotta-dark disabled:opacity-40 disabled:cursor-not-allowed text-base"
